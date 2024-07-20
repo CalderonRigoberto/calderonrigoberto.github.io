@@ -1,0 +1,89 @@
+---
+interface Props {
+    exp: string;
+    corp: string;
+	title: string;
+	current: boolean;
+    details: Array<String>;
+	
+}
+
+const {  exp, corp, title, current, details } = Astro.props;
+---
+<div class="experience_item">
+    <div class="experience_title">
+        { current && <div class="blob">
+        </div>}
+        <div class="experience_title_detail">
+            <p>{exp} <span class="corp">{corp}</span></p>
+            <p class="experience_title_occupation">{title}</p>
+        </div>
+    </div>
+    <ul>
+        {details.map((item) => (
+         <li>{item}.</li>
+        ))}
+    </ul>
+</div>
+
+
+<style is:inline>
+.experience_item {
+    width: 100%;
+}
+
+
+.experience_title  {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.experience_title_occupation {
+    color: #707070;
+}
+
+.experience_title_detail {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.experience_item ul {
+    margin-left: 25px;
+    margin-bottom: 1rem;
+}
+
+.corp {
+    font-weight: 600;
+}
+
+.blob {
+	background: rgb(39, 161, 23);
+	border-radius: 50%;
+	margin: 10px;
+	height: 20px;
+	width: 20px;
+
+	box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+	transform: scale(1);
+	animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(42, 182, 37, 0.7);
+	}
+
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(82, 199, 67, 0);
+	}
+
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(119, 185, 57, 0);
+	}
+}
+</style>

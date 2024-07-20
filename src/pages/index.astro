@@ -1,0 +1,138 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ThemeIcon from '../components/ThemeIcon.astro';
+import ExperienceItem from '../components/ExperienceItem.astro';
+---
+
+<Layout title="Welcome Rigoberto.">
+	<header>
+		<nav class="navbar">
+			<section class="logo">
+				<span class="logo_name">Rigoberto Calderon</span>
+				<span class="logo_occupation">Full Stack Developer</span>
+			</section>
+
+			
+			<section class="navbar_items">
+				<a class="navbar_item" href="#experience">Experience</a>
+				<ThemeIcon />
+			</section>
+		</nav>
+		
+	</header>
+	<main>
+		<section class="presentation">
+			<p class="presentation_text">Efficient developer that make stuff engineering with Flutter, Spring Boot, Android that love to create beautiful interfaces, solving problems and work with awesome people.</p>
+		</section>
+
+		<section id="experience" class="experiences">
+			<p class="experiences_text">experiences</p>
+			<div class="experiences_items">
+				
+					<ExperienceItem exp={"Current"} corp={"VISE SA DE CV"} title={"Full stack developer"} current={true} details={["Creation of Flutter packages to communicate native Android code to Flutter apps to use hardware capabilities and SDK communications",
+					 "Develop, mantain of facial recognition app with Android Jetpack Compose using MVVM, DI, Retrofit and Room",
+					 "Develop Rest API applying optimizacions with data structures, cache, and SQL queries improvments performance",
+					 "Database documentation with tools to automate process like Docker, Schemaspy",
+					 "Craft Flutter modules to core enterprise process with Drift, Riverpod"]}/>
+					
+					<ExperienceItem exp={"2022 April - 2022 August"} corp={"VISE SA DE CV"} title={"Mobile developer Intern"} current={false} details={["Develop modules on Flutter to company workers",
+					 "Mantain legacy code base of Android Applications",
+					 "Develop REST API using Spring Boot"]}/>
+					
+			</div>
+		</section>
+	</main>
+</Layout>
+
+<style is:inline>
+	header { 
+		margin: 10px;
+		width: min(100% - 2rem, 100vw);
+		position: fixed;
+		top: 0;
+		display: flex;
+		justify-content: center;
+	}
+
+	main {
+	
+		display: grid;
+		justify-items: center;
+	}
+
+	.navbar {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		
+		padding: 0.235rem;
+		border-radius: 50px;
+		max-width: 1920px;
+		width: 100%;
+		background-color: rgba(233, 233, 233, 0.4);
+		-webkit-backdrop-filter: blur(25px);
+		backdrop-filter: blur(25px);
+	}
+
+	.navbar .logo, .navbar_items {
+		padding: 0.8rem 0.8rem 0.8rem 0.8rem ;
+		display: flex;
+		align-items: center;
+	}
+
+	.navbar .navbar_items .navbar_item {
+		text-decoration: none;
+		color: #000;
+	}
+
+	.navbar .logo {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.navbar_items {
+		gap: 10px;
+	}
+
+	.logo .logo_name {
+		font-size: 1.5em;
+		font-family:  "Quicksand", sans-serif;
+		font-weight: 700;
+	}
+
+	.logo .logo_occupation {
+		font-size: 1.25em;
+		font-family:  "Quicksand", sans-serif;
+		font-weight: 600;
+		color: #000000;
+	}
+
+	.presentation {
+		max-width: 900px;
+		width: 100%;
+		height: 100vh;
+		display: grid;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.presentation_text {
+		text-align: center;
+		font-size: 2.5em;
+		font-family:  "Playfair Display", serif;
+	}
+
+
+	.experiences {
+		width: min(100% - 2rem, 40rem);
+	}
+
+	.experiences .experiences_text {
+		font-size: 1.235rem;
+		font-weight: 600;
+		text-transform: capitalize;
+	}
+
+
+</style>
+
