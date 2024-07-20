@@ -153,9 +153,10 @@ const { exp, corp, title, current, details } = Astro.props;
     }
 
     .experience_title_detail {
-        width: 100%;
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        width: min(100% - 1rem, 30rem);
     }
 
     .experience_title_detail p {
