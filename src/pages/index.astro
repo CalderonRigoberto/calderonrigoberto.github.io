@@ -240,6 +240,27 @@ import ExperienceItem from "../components/ExperienceItem.astro";
 				/>
 			</div>
 		</section>
+		<section id="connnect" class="connect">
+			<p class="connect_text">Connect</p>
+			<p>Always searching for new opportunities, feel free to contact me.</p>
+			
+			<div class="social_links">
+				<div class="link">
+					<span>Github</span>
+					<a href="https://github.com/CalderonRigoberto/">github.com/CalderonRigoberto/ ↗️</a>
+				</div>
+				
+				<div class="link">
+					<span>Email</span>
+					<a href="mailto:rcalderon0817@gmail.com">rcalderon0817@gmail.com ↗️</a>
+				</div>
+
+				<div class="link">
+					<span>LinkedIn</span>
+					<a href="https://www.linkedin.com/in/calderonrigoberto/">linkedin.com/in/calderonrigoberto/ ↗️</a>
+				</div>
+			</div>
+		</section>
 	</main>
 </Layout>
 
@@ -371,12 +392,14 @@ import ExperienceItem from "../components/ExperienceItem.astro";
 		}
 	}
 
-	.experiences {
+	.experiences,
+	.connect {
 		margin-top: 10rem;
 		width: min(100% - 2rem, 40rem);
 	}
 
-	.experiences .experiences_text {
+	.experiences .experiences_text,
+	.connect .connect_text {
 		font-size: 1.235rem;
 		font-weight: 600;
 		text-transform: capitalize;
@@ -405,4 +428,22 @@ import ExperienceItem from "../components/ExperienceItem.astro";
 			font-family: "Playfair Display", serif;
 		}
 	}
+	
+	.social_links {
+		display: flex;
+		flex-direction: column;
+		width: min(100% - 2rem, 30rem);
+	}
+
+	.social_links .link {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+
+	.social_links .link  a {
+		color: #000;
+	}
+
 </style>
