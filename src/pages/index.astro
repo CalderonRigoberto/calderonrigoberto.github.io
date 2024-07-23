@@ -246,12 +246,12 @@ import ExperienceItem from "../components/ExperienceItem.astro";
 <style is:inline>
 	header {
 		margin: 10px;
-		width: min(100% - 2rem, 100vw);
 		position: fixed;
 		top: 0;
 		display: flex;
 		justify-content: center;
 		z-index: 2;
+		width: 100%;
 	}
 
 	main {
@@ -263,19 +263,19 @@ import ExperienceItem from "../components/ExperienceItem.astro";
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-
-		padding: 0.235rem;
 		border-radius: 50px;
-		max-width: 1920px;
-		width: 100%;
+		width: min(100% - 2rem, 60rem);;
 		background-color: rgba(233, 233, 233, 0.4);
-		-webkit-backdrop-filter: blur(25px);
-		backdrop-filter: blur(25px);
+		-webkit-backdrop-filter: blur(10px);
+		backdrop-filter: blur(10px);
 	}
 
 	.navbar .logo,
 	.navbar_items {
-		padding: 0.8rem 0.8rem 0.8rem 0.8rem;
+		padding-top: 1rem;
+		padding-left: 2rem;
+		padding-right: 2rem;
+		padding-bottom: 1rem;
 		display: flex;
 		align-items: center;
 	}
@@ -295,13 +295,13 @@ import ExperienceItem from "../components/ExperienceItem.astro";
 	}
 
 	.logo .logo_name {
-		font-size: 1.5em;
+		font-size: 1.235em;
 		font-family: "Quicksand", sans-serif;
 		font-weight: 700;
 	}
 
 	.logo .logo_occupation {
-		font-size: 1.25em;
+		font-size: 1.15em;
 		font-family: "Quicksand", sans-serif;
 		font-weight: 600;
 		color: #000000;
@@ -320,6 +320,8 @@ import ExperienceItem from "../components/ExperienceItem.astro";
 		text-align: center;
 		font-size: 2.5em;
 		font-family: "Playfair Display", serif;
+		padding-left: 2rem;
+		padding-right: 2rem;
 	}
 
 	.scroll {

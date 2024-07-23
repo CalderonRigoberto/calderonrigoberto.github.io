@@ -133,7 +133,7 @@ const { exp, corp, title, current, details } = Astro.props;
         animation: hero-gradient-animation 10s linear infinite alternate;
         background-blend-mode: normal, normal;
 
-        padding: 10px;
+        padding: 2rem;
         margin-bottom: 1.5rem;
         border-radius: 20px;
         -webkit-backdrop-filter: blur(55px);
@@ -156,7 +156,7 @@ const { exp, corp, title, current, details } = Astro.props;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: min(100% - 1rem, 30rem);
+        width: 100%;
     }
 
     .experience_title_detail p {
@@ -203,6 +203,17 @@ const { exp, corp, title, current, details } = Astro.props;
         100% {
             transform: scale(0.95);
             box-shadow: 0 0 0 0 rgba(119, 185, 57, 0);
+        }
+    }
+    @media (max-width: 720px) {
+        .experience_title_detail {
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+        }
+
+        .experience_title_detail p {
+            margin: 0;
         }
     }
 </style>
