@@ -240,16 +240,33 @@ import ExperienceItem from "../components/ExperienceItem.astro";
 				/>
 			</div>
 		</section>
+
+		<section class="projects">
+			<p class="projects_text">Projects</p>
+			<a class="project_link" href="https://github.com/CalderonRigoberto/guia-desarrollo-java-poo" target="_blank">
+				<div class="card">
+					<div class="card-content">
+						<h2>Guide Java OOP</h2>
+						<p>The main intention of this repo is for my commitment to support spanish-speaking community and work along side the new programmers that feel draw to Java and Software Development and learn as much as possible together. 🔭</p>
+					</div>
+					<a class="project_link" href="https://github.com/CalderonRigoberto/guia-desarrollo-java-poo" target="_blank">See project and contribute</a>
+				</div>
+			</a>
+		</section>
+
 		<section id="connnect" class="connect">
 			<p class="connect_text">Connect</p>
 			<p>Always searching for new opportunities, feel free to contact me.</p>
 			
 			<div class="social_links">
 				<div class="link">
+					<span>Resume/CV</span>
+					<a href="https://drive.google.com/file/d/1Reo953v_uZ402P0GPAiGkPHmA1Pq-x1L/view?usp=sharing"> calderonrigoberto.resume ↗️</a>
+				</div>
+				<div class="link">
 					<span>Github</span>
 					<a href="https://github.com/CalderonRigoberto/">github.com/CalderonRigoberto/ ↗️</a>
-				</div>
-				
+				</div>				
 				<div class="link">
 					<span>Email</span>
 					<a href="mailto:rcalderon0817@gmail.com">rcalderon0817@gmail.com ↗️</a>
@@ -393,16 +410,74 @@ import ExperienceItem from "../components/ExperienceItem.astro";
 	}
 
 	.experiences,
+	.projects,
 	.connect {
 		margin-top: 10rem;
 		width: min(100% - 2rem, 40rem);
 	}
 
 	.experiences .experiences_text,
+	.projects .projects_text,
 	.connect .connect_text {
 		font-size: 1.235rem;
 		font-weight: 600;
 		text-transform: capitalize;
+	}
+
+	.projects .card {
+		background-color: #1E88E5;
+		color: white;
+		border-radius: 10px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: start;
+		padding: 20px;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+		position: relative;
+		transition: 0.7s;
+	}
+
+	.card:hover {
+		cursor: pointer;
+		transform: scale(1.05);
+		box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+	}
+
+	.card-content {
+		flex-grow: 1;
+	}
+
+	.card-content h2 {
+		margin: 0;
+		font-size: 20px;
+	}
+
+	.card-content p {
+		margin-top: 10px;
+		font-size: 16px;
+	}
+
+	.card-icon {
+		background-color: rgba(255, 255, 255, 0.2);
+		border-radius: 50%;
+		width: 40px;
+		height: 40px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.card-icon img {
+		width: 20px;
+		height: 20px;
+	}
+
+	.projects .project_link {
+		color: #fff;
+		text-decoration: none;
+		font-weight: 600;
+		font-size: 0.925rem;
 	}
 
 	@media (max-width: 720px) {
